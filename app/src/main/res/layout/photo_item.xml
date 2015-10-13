@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/photo_item">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ivProfilePhoto"
+        android:scaleType="fitCenter"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:padding="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:riv_corner_radius="18dp"
+        app:riv_border_width="1dp"
+        app:riv_border_color="#aaaaaa"
+        app:riv_mutate_background="true"
+        app:riv_tile_mode="repeat"
+        app:riv_oval="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UserName"
+        android:id="@+id/tvUserName"
+        android:layout_toRightOf="@+id/ivProfilePhoto"
+        android:paddingTop="15dp"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/bold_font"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="relativeTime"
+        android:id="@+id/tvRelativeTime"
+        android:paddingTop="15dp"
+        android:paddingRight="8dp"
+        android:textColor="#aaaaaa"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ivPhoto"
+        android:layout_below="@+id/ivProfilePhoto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLikes"
+        android:layout_below="@+id/ivPhoto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/bold_font" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tvViewAllComments"
+        android:layout_below="@+id/tvLikes"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Caption"
+        android:id="@+id/tvCaption"
+        android:layout_below="@+id/tvViewAllComments"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textSize="12sp"
+        android:fontFamily="arial-thin"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"/>
+
+
+
+</RelativeLayout>
