@@ -1,5 +1,7 @@
 package com.codepath.socialphotoviewer;
 
+import android.text.format.DateUtils;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -106,19 +108,6 @@ public class InstagramPhoto {
 
     public String getRelativeTime() {
         long ct = Long.parseLong(createdTime);
-        TimeZone timeZone = TimeZone.getTimeZone("UTC");
-        Calendar calendar = Calendar.getInstance(timeZone);
-        long now = 252000l + (calendar.getTime().getTime() / 1000);
-        float elapsedSeconds = now - ct;
-        System.out.println("Ct: "+ct+" Now: "+now);
-        if (elapsedSeconds < 60) { // less than a minute
-            return String.format("%.0fs", elapsedSeconds);
-        } else if (elapsedSeconds < 3600) { // less than an hour
-            return String.format("%.0fm", Math.floor(elapsedSeconds / 60));
-        } else if (elapsedSeconds < 86400) { // less than a day
-            return String.format("%.0fh", Math.floor(elapsedSeconds / 3600));
-        } else {
-            return String.format("%.0fd", Math.floor(elapsedSeconds / 86400));
-        }
+        return DateUtils.getRelativeTimeSpanString(ct * 1000, System.currentTimeMillis(),10).toString();
     }
 }
